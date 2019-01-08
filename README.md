@@ -122,10 +122,69 @@ Connect all Nodes running Docker, Cloud or on-Premise in one Browser-Dashboard (
 
 
 
-## Configuration Management Tools
+## DevOps / Configuration Management Tools
 
 #### Cloudformation
 
+
+#### Ansible & AWS
+
+> Ansible can be used to define, deploy, and manage a wide variety of AWS services (see https://www.ansible.com/integrations/cloud/amazon-web-services)
+
+Out of the box, Ansible has nearly 100 modules supporting AWS capabilities, including:
+
+AMI Management
+Autoscaling Groups
+CloudFormation
+CloudTrail
+CloudWatch
+DynamoDB
+ElastiCache
+Elastic Block Store (EBS)
+Elastic Cloud Compute (EC2)
+Elastic IPs (EIP)
+Elastic Load Balancers (ELB)
+Identity Access Manager (IAM)
+Kinesis
+Lambda
+Relational Database Service
+Route53
+Security Groups
+Security Token Service
+Simple Storage Service (S3)
+Virtual Private Cloud (VPC)
+
+
+Ansible AWS Guide: https://docs.ansible.com/ansible/latest/scenario_guides/guide_aws.html
+
+> Ansible modules provide an easier to use interface than CloudFormation in many examples, without defining a complex JSON document. This is recommended for most users.
+
+example
+```yaml
+# demo_setup.yml
+
+- hosts: localhost
+  connection: local
+  gather_facts: False
+
+  tasks:
+
+    - name: Provision a set of instances
+      ec2:
+         key_name: my_key
+         aws_access_key: "{{ec2_access_key}}"
+  		 aws_secret_key: "{{ec2_secret_key}}"
+         group: test
+         instance_type: t2.micro
+         image: "{{ ami_id }}"
+         wait: true
+         exact_count: 5
+         count_tag:
+            Name: Demo
+         instance_tags:
+            Name: Demo
+      register: ec2
+```
 
 #### OpsWorks / Chef
 
@@ -139,9 +198,16 @@ AWS managed configuration management service, based on Chef (https://www.dev-ins
 
 #### Bootstrapping via CloudInit
 
+#### AWS Codepipeline
+
+alternative to Jenkins / GitLab (see https://aws.amazon.com/codepipeline/) - but bound to AWS
+
+https://medium.com/@xoor/using-aws-codepipeline-to-automate-deployments-to-elasticbeanstalk-e80ca988ef70
 
 
-#### Basis-KnowHow
+
+
+## Basis-KnowHow
 
 ###### Build-Time vs. Boot-Time
 
