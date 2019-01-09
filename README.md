@@ -10,6 +10,16 @@ We'll try to shed some light into all the tools by classifying them into some ca
 
 Just "usual" VMs
 
+EC2 instances use Amazon Machine Images (AMI) as there base images.
+
+These images could be found inside the EC2 instance creation wizard:
+
+![ec2-ami-selector](screenshots/ec2-ami-selector.png)
+
+or with the help of the AWS CLI and the command `aws ec2 describe-images` ([see the docs](https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-instances.html)).
+
+Specific images - like Ubuntu 18.04 - could be found through the AWS Marketplace or specific AMI finder pages like the [ubuntu Amazon EC2 AMI Locator](https://cloud-images.ubuntu.com/locator/ec2/).
+
 #### Lightsail (EC2 light)
 
 VPS (Virtual Private Server) like DigitalOcean / 1&1 (see https://www.heise.de/select/ix/2017/5/1492861894740647)
