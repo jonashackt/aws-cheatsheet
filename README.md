@@ -10,6 +10,8 @@ We'll try to shed some light into all the tools by classifying them into some ca
 
 Just "usual" VMs
 
+###### AMI - Amazon Machine Images
+
 EC2 instances use Amazon Machine Images (AMI) as there base images.
 
 These images could be found inside the EC2 instance creation wizard:
@@ -19,6 +21,14 @@ These images could be found inside the EC2 instance creation wizard:
 or with the help of the AWS CLI and the command `aws ec2 describe-images` ([see the docs](https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-instances.html)).
 
 Specific images - like Ubuntu 18.04 - could be found through the AWS Marketplace or specific AMI finder pages like the [ubuntu Amazon EC2 AMI Locator](https://cloud-images.ubuntu.com/locator/ec2/).
+
+###### AMI instance types
+
+There are multiple AMI instance types (see https://aws.amazon.com/premiumsupport/knowledge-center/instance-store-vs-ebs/) - especially
+
+* __instance store__ : is directly attached and should be used for temporary data only, instance store volumes is not persistent through instance stops
+* __EBS__: In Amazon Elastic Block Store data will retain longer - EBS volumes preserve their data through instance stops and terminations, backup is easy with EBS snapshot 
+
 
 #### Lightsail (EC2 light)
 
