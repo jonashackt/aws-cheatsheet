@@ -3,6 +3,8 @@ If your brain starts to explode while thinking about the whole lot of AWS tools,
 
 We'll try to shed some light into all the tools by classifying them into some categories (like IaaS, hybrid IaaS/PaaS, PaaS & Configuration Management) and also trying to separate them from each other.
 
+![iaas-paas-saas-comparison](https://blogs.bmc.com/wp-content/uploads/2017/09/iaas-paas-saas-comparison-1024x759.jpg)
+
 
 ## IaaS - Infrastructure-as-a-Service
 
@@ -236,8 +238,20 @@ AMI baseconfig --> bootstrapping / boot up maybe needs a lot of time (Patches us
 VPCs, Security-Groups, Network-ACLs, Router, LBs ...
 
 
+# Certification
+
+https://aws.amazon.com/certification/certified-solutions-architect-associate/
+
 
 # Links
 
 https://hackernoon.com/too-many-choices-how-to-pick-the-right-tool-to-manage-your-docker-clusters-b5b3061b84b7
+
+https://dev.to/totalcloudio/ecs-vs-eks-vs-fargate-the-good-the-bad-the-ugly-58he
+
+https://grahamlyons.com/article/everything-you-need-to-know-about-networking-on-aws
+
+https://aws.amazon.com/solutions/ (AWS Solutions are technical reference implementations built and vetted by AWS Architects and AWS Partners, designed to help customers solve the common problems faced by their peers around the world. AWS Solutions are built to be operationally effective, performant, reliable, secure, cost effective, and be Well-Architected.)
+
+https://itnext.io/the-cloud-skills-shortage-and-the-unemployed-army-of-the-certified-bd405784cef1?gi=b4d1e67021ff
 
